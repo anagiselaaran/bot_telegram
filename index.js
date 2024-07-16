@@ -9,6 +9,12 @@ require('dotenv').config()
 //app de expreess
 const app = express()
 
+
+//config ruta
+app.get('/', (req, res) => {
+    res.send('hola botino')
+})
+
 //var bot d telegram
 const bot = new Telegraf(process.env.BOT_TOKEN)
 
